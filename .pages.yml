@@ -1,0 +1,40 @@
+media:
+  input: assets/products
+  output: assets/products
+
+content:
+  - name: products
+    label: Товары
+    type: file
+    path: content/products.json
+    format: json
+    list: true
+    fields:
+      - {name: name, label: Название товара, type: string, required: true}
+      - {name: price, label: "Цена (только число)", type: number}
+      - {name: currency, label: Валюта, type: select, options: {values: [UAH, USD]}}
+      - {name: priceLabel, label: "Цена текстом (если не число)", type: string}
+      - {name: category, label: Категория, type: select, options: {values: [Книги, Приложения, Планеры, Шаблоны]}}
+      - {name: type, label: Тип, type: string}
+      - {name: format, label: "Что внутри", type: string}
+      - {name: image, label: Картинка, type: image}
+      - {name: caption, label: Подпись, type: string}
+      - {name: description, label: Описание, type: text}
+      - {name: compatibility, label: Совместимость, type: string}
+      - {name: link, label: "Ссылка на товар в BlackSea", type: string}
+      - {name: checkout, label: "Ссылка «Купить»", type: string}
+      - {name: badge, label: "Плашка (ХИТ ПРОДАЖ / НОВИНКА)", type: string}
+      - {name: badgeClass, label: Цвет плашки, type: select, options: {values: [none, new, sale]}}
+      - {name: newest, label: "Порядок (больше = левее)", type: number}
+      - {name: id, label: "Код товара (латиницей)", type: string, required: true}
+
+  - name: site
+    label: "Магазин (название, курс)"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - {name: name, label: Название магазина, type: string}
+      - {name: sub, label: Подпись под названием, type: string}
+      - {name: rate, label: "Курс: гривен за 1 доллар", type: number}
+      - {name: store, label: "Ссылка на магазин BlackSea", type: string}
