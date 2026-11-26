@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="600" height="560" fill="#f5e5d8"/>
+<circle cx="300" cy="282" r="208" fill="#f0d6c2"/>
+<g transform="translate(139 62) rotate(-5 151 202)" filter="url(#shadow)">
+ <rect x="9" y="8" width="302" height="400" rx="5" fill="#e2cfbd"/>
+ <rect width="302" height="400" rx="5" fill="#fffdf5"/>
+ <rect width="302" height="48" rx="5" fill="#e9dfd7"/>
+ <path d="M0 43h302v5H0z" fill="#e9dfd7"/>
+ <text x="25" y="31" fill="#77685f" font-family="Arial,sans-serif" font-size="11" font-weight="bold" letter-spacing="1.2">НЕДЕЛЯ БЕЗ СПЕШКИ</text>
+ <text x="258" y="31" fill="#a49184" font-family="Arial,sans-serif" font-size="9">01 / 07</text>
+ <text x="25" y="80" fill="#c08b7a" font-family="Arial,sans-serif" font-weight="bold" font-size="27">мои планы</text>
+ <text x="25" y="99" fill="#ae9b8d" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.2">НЕМНОГО ДЕЛ. МНОГО ЖИЗНИ.</text>
+ <g stroke="#e8ded3" stroke-width="1.3"><path d="M25 119h252M25 174h252M25 229h252M25 284h252M25 339h252"/><path d="M153 119v220"/></g>
+ <g fill="#b98e80" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1"><text x="28" y="140">ПОНЕДЕЛЬНИК</text><text x="162" y="140">ВТОРНИК</text><text x="28" y="195">СРЕДА</text><text x="162" y="195">ЧЕТВЕРГ</text><text x="28" y="250">ПЯТНИЦА</text><text x="162" y="250">СУББОТА</text><text x="28" y="305">ВОСКРЕСЕНЬЕ</text><text x="162" y="305">ДЛЯ СЕБЯ</text></g>
+ <path d="M25 365h168" stroke="#ede4db"/><text x="25" y="382" fill="#b6a69b" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5">ALEX DIGITAL PLANNER</text>
+</g>
+<g transform="translate(458 122) rotate(14)" filter="url(#softshadow)"><rect width="13" height="292" rx="6" fill="#b48ac4"/><path d="M0 25h13M0 230h13" stroke="#e2c8e8" stroke-width="3"/><path d="M2 291l4.5 17 4.5-17z" fill="#d3bcac"/><path d="M5 303l1.5 5 1.5-5z" fill="#55445b"/></g>
+<text x="31" y="525" fill="#b89887" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.2">GENTLE PLANS FOR YOUR WEEK</text>
+</svg>

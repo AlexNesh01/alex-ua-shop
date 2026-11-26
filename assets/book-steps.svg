@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="600" height="560" fill="#f7ddd4"/>
+<circle cx="308" cy="280" r="204" fill="#f0c6b9"/>
+<path d="M31 74h52m-26-26v52M530 453h34m-17-17v34" stroke="#e6ac9d" stroke-width="2"/>
+<g transform="translate(178 58) rotate(-7 122 204)" filter="url(#shadow)">
+ <rect x="9" y="8" width="244" height="402" rx="5" fill="#f7ede3"/>
+ <rect width="244" height="402" rx="4" fill="#e98675"/>
+ <rect x="13" width="8" height="402" fill="#d67163" opacity=".58"/>
+ <text x="36" y="43" fill="#ffebe0" font-family="Arial,sans-serif" font-weight="bold" font-size="10" letter-spacing="2">ALEX BOOKS / 01</text>
+ <text x="36" y="95" fill="#fff5e7" font-family="Arial,sans-serif" font-weight="bold" font-size="33">Маленькие</text>
+ <text x="36" y="130" fill="#fff5e7" font-family="Arial,sans-serif" font-weight="bold" font-size="33">шаги</text>
+ <text x="37" y="155" fill="#ffe4dc" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5">БОЛЬШИЕ ПЕРЕМЕНЫ</text>
+ <g transform="translate(126 267)" fill="#f8d4a3"><ellipse rx="24" ry="77"/><ellipse rx="24" ry="77" transform="rotate(45)"/><ellipse rx="24" ry="77" transform="rotate(90)"/><ellipse rx="24" ry="77" transform="rotate(135)"/><circle r="21" fill="#cf665b"/></g>
+ <text x="36" y="377" fill="#ffe4da" font-family="Arial,sans-serif" font-size="7" letter-spacing="2">КНИГА ДЛЯ ВАШЕГО РИТМА</text>
+</g>
+<text x="31" y="525" fill="#c27d6e" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.2">A LITTLE BETTER, EVERY DAY</text>
+</svg>

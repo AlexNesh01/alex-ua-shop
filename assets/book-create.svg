@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="600" height="560" fill="#f3e4a8"/>
+<circle cx="300" cy="279" r="208" fill="#ebd786"/>
+<path d="M74 150h45M96 128v45M512 391h40M532 371v40" stroke="#d8bd5d" stroke-width="2"/>
+<g transform="translate(174 56) rotate(-6 125 204)" filter="url(#shadow)">
+ <rect x="9" y="8" width="250" height="403" rx="4" fill="#f2e4bc"/>
+ <rect width="250" height="403" rx="4" fill="#8065cb"/>
+ <rect x="13" width="7" height="403" fill="#6b50b6"/>
+ <text x="36" y="43" fill="#e9dcff" font-family="Arial,sans-serif" font-weight="bold" font-size="9" letter-spacing="2">ALEX BOOKS / 03</text>
+ <text x="35" y="109" fill="#fff9e4" font-family="Arial,sans-serif" font-weight="bold" font-size="35">ТВОРИТЬ</text>
+ <text x="35" y="151" fill="#fff9e4" font-family="Arial,sans-serif" font-weight="bold" font-size="35">СМЕЛО</text>
+ <text x="36" y="177" fill="#e6d8fb" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.3">КНИГА ДЛЯ ВАШИХ ИДЕЙ</text>
+ <g transform="translate(125 285)"><path d="M0-73l13 46 39-27-27 39 46 15-46 13 27 39-39-27L0 73l-13-48-39 27 27-39L-71 0l46-15-27-39 39 27z" fill="#f0b69d"/><circle r="20" fill="#f9dc82"/></g>
+ <text x="35" y="378" fill="#e9ddfb" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.7">MAKE SOMETHING WONDERFUL</text>
+</g>
+<text x="31" y="525" fill="#ac9652" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.2">A LITTLE BRAVER EVERY DAY</text>
+</svg>

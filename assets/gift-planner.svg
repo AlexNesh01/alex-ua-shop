@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 350" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="630" height="350" fill="#d1c3fa"/>
+<circle cx="355" cy="172" r="184" fill="#c0acf3"/>
+<g transform="translate(130 38) rotate(-8 172 139)" filter="url(#shadow)">
+ <rect x="7" y="7" width="343" height="275" rx="6" fill="#e5d7c6"/>
+ <rect width="343" height="275" rx="6" fill="#fffaf0"/>
+ <rect width="343" height="41" rx="6" fill="#efe3d9"/>
+ <text x="23" y="26" fill="#7f6c64" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="1.4">МОЯ НЕДЕЛЯ</text><text x="270" y="26" fill="#a9978d" font-family="Arial,sans-serif" font-size="8">ALEX / PDF</text>
+ <text x="23" y="75" fill="#bf8b7c" font-family="Arial,sans-serif" font-weight="bold" font-size="25">всё получится.</text>
+ <text x="23" y="94" fill="#b4a298" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.2">ПЛАНЫ ДЛЯ ВАШЕЙ ЛУЧШЕЙ НЕДЕЛИ</text>
+ <g stroke="#e9ded3"><path d="M23 111h296M23 153h296M23 195h296M23 237h296"/><path d="M172 111v126"/></g>
+ <g fill="#bf9b8a" font-family="Arial,sans-serif" font-size="8" font-weight="bold" letter-spacing="1"><text x="25" y="128">ПОНЕДЕЛЬНИК</text><text x="181" y="128">ВТОРНИК</text><text x="25" y="170">СРЕДА</text><text x="181" y="170">ЧЕТВЕРГ</text><text x="25" y="212">ПЯТНИЦА</text><text x="181" y="212">ВЫХОДНЫЕ</text></g>
+ <text x="23" y="258" fill="#c3b2a6" font-family="Arial,sans-serif" font-size="7" letter-spacing="1.4">LITTLE PLANS, BIG JOY</text>
+</g>
+<g transform="translate(468 52) rotate(13)" filter="url(#softshadow)"><rect width="12" height="231" rx="6" fill="#f5a993"/><path d="M0 25h12M0 184h12" stroke="#ffd5b6" stroke-width="2"/><path d="M2 229l4 17 4-17z" fill="#ddc5ac"/></g>
+<path d="M95 89c4 11 10 17 21 21-11 4-17 10-21 21-4-11-10-17-21-21 11-4 17-10 21-21zM533 260c4 10 9 15 19 19-10 4-15 9-19 19-4-10-9-15-19-19 10-4 15-9 19-19z" fill="#f6f0ff"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="600" height="560" fill="#ded8f7"/>
+<circle cx="300" cy="280" r="207" fill="#cec2f0"/>
+<path d="M55 164c12-5 19-12 24-24 5 12 12 19 24 24-12 5-19 12-24 24-5-12-12-19-24-24z" fill="#f6f0ff"/>
+<path d="M514 390c8-3 12-7 15-15 3 8 7 12 15 15-8 3-12 7-15 15-3-8-7-12-15-15z" fill="#f6f0ff"/>
+<g transform="translate(171 55) rotate(6 124 204)" filter="url(#shadow)">
+ <rect x="9" y="8" width="245" height="404" rx="4" fill="#ddd2b7"/>
+ <rect width="245" height="404" rx="5" fill="#fff9e9"/>
+ <rect x="12" y="0" width="6" height="404" fill="#e9dfcc"/>
+ <rect x="37" y="34" width="169" height="39" rx="19.5" fill="#e0d5f7"/>
+ <text x="121" y="58" text-anchor="middle" fill="#685792" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1.2">ПЛАНЕР НА КАЖДЫЙ ДЕНЬ</text>
+ <text x="37" y="129" fill="#352b48" font-family="Arial,sans-serif" font-weight="bold" font-size="43">мой</text>
+ <text x="37" y="175" fill="#352b48" font-family="Arial,sans-serif" font-weight="bold" font-size="43">лучший</text>
+ <text x="37" y="221" fill="#352b48" font-family="Arial,sans-serif" font-weight="bold" font-size="43">год</text>
+ <g transform="translate(158 304)" fill="#dda089"><ellipse rx="16" ry="49"/><ellipse rx="16" ry="49" transform="rotate(45)"/><ellipse rx="16" ry="49" transform="rotate(90)"/><ellipse rx="16" ry="49" transform="rotate(135)"/><circle r="15" fill="#f0c86d"/></g>
+ <path d="M38 325h50M38 336h35" stroke="#aa9fa7" stroke-width="1"/>
+ <text x="37" y="381" fill="#a89baa" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.8">ALEX DIGITAL / PLANNER</text>
+</g>
+<text x="31" y="525" fill="#8d7dbb" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.2">MAKE SPACE FOR YOUR PLANS</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" role="img">
+<defs>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="6" flood-color="#2e2144" flood-opacity=".22"/></filter>
+ <filter id="softshadow" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="4" flood-color="#2e2144" flood-opacity=".16"/></filter>
+ 
+</defs>
+<rect width="600" height="560" fill="#dcebe4"/>
+<circle cx="300" cy="277" r="207" fill="#c6ddd3"/>
+<g transform="translate(171 60) rotate(6 126 204)" filter="url(#shadow)">
+ <rect x="10" y="8" width="252" height="402" rx="5" fill="#e5e3d1"/>
+ <rect width="252" height="402" rx="5" fill="#a6c8b4"/>
+ <rect x="13" y="0" width="7" height="402" fill="#87ad98"/>
+ <text x="38" y="45" fill="#ecf5e9" font-family="Arial,sans-serif" font-weight="bold" font-size="9" letter-spacing="1.8">ALEX PLANNERS / 03</text>
+ <text x="38" y="110" fill="#f7f9ed" font-family="Arial,sans-serif" font-weight="bold" font-size="32">деньги</text>
+ <text x="38" y="147" fill="#f7f9ed" font-family="Arial,sans-serif" font-weight="bold" font-size="32">под</text>
+ <text x="38" y="184" fill="#f7f9ed" font-family="Arial,sans-serif" font-weight="bold" font-size="32">контролем</text>
+ <text x="38" y="209" fill="#e2efe2" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.1">ФИНАНСОВЫЙ ПЛАНЕР</text>
+ <rect x="37" y="254" width="176" height="99" rx="12" fill="#d2e5d0"/>
+ <path d="M58 329h135M58 329v-55" stroke="#8cac98" stroke-width="1"/>
+ <path d="M70 317l28-19 23 9 32-30 25 8" fill="none" stroke="#527c64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="178" cy="285" r="5" fill="#527c64"/>
+ <text x="38" y="380" fill="#e7f2e4" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.8">PLAN WELL. LIVE WELL.</text>
+</g>
+<text x="31" y="525" fill="#7da58f" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.2">A LITTLE MORE PEACE OF MIND</text>
+</svg>
