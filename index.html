@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7857dc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f9f8f5">
+  <link rel="manifest" href="assets/manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ALEX.UA">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta name="apple-touch-icon" href="assets/icon-180.png">
+  <meta name="description" content="ALEX.UA digital — цифровые планеры, книги и шаблоны. Оплата картой, файлы приходят сразу после покупки.">
+  <title>ALEX.UA digital — цифровые планеры, книги и шаблоны</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="app.js" defer></script>
+  <script>
+  /* PWA: офлайн-кеш (sw.js лежит рядом — для версии из архива/хостинга) и кнопка «Установить приложение».
+     В од-файловой версии по file:// регистрация просто не срабатывает — всё работает и без неё. */
+  (function () {
+    if (location.protocol.indexOf('http') === 0 && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+    var deferredPrompt = null;
+    var btn = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!btn) {
+        btn = document.createElement('button');
+        btn.id = 'installAppBtn';
+        btn.type = 'button';
+        btn.textContent = '\u{1F4F2} Установить приложение';
+        btn.addEventListener('click', function () {
+          if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function () { deferredPrompt = null; btn.remove(); }); }
+        });
+        document.body.appendChild(btn);
+      }
+    });
+    window.addEventListener('appinstalled', function () { if (btn) btn.remove(); });
+  })();
+  </script>
+  <link rel="canonical" href="https://alex1ua.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALEX.UA digital">
+  <meta property="og:locale" content="ru_UA">
+  <meta property="og:title" content="ALEX.UA digital — цифровые планеры, книги и шаблоны">
+  <meta property="og:description" content="Планеры, книги и шаблоны для повседневных задач. Оплата картой, файлы приходят сразу после покупки.">
+  <meta property="og:url" content="https://alex1ua.netlify.app/">
+  <meta property="og:image" content="https://alex1ua.netlify.app/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALEX.UA digital — цифровые планеры, книги и шаблоны">
+  <meta name="twitter:description" content="Планеры, книги и шаблоны. Оплата картой, файлы сразу после покупки.">
+  <meta name="twitter:image" content="https://alex1ua.netlify.app/assets/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "ALEX.UA digital",
+    "url": "https://alex1ua.netlify.app/",
+    "description": "Цифровые планеры, электронные книги, веб-приложения и шаблоны для повседневных задач.",
+    "image": "https://alex1ua.netlify.app/assets/og-cover.png",
+    "sameAs": ["https://844129289197.blacksea.in.ua/"],
+    "currenciesAccepted": "UAH, USD",
+    "paymentAccepted": "Карта, Apple Pay, Google Pay"
+  }
+  </script>
+</head>
+<body id="top">
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true">
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.8c1.6 5.6 3.8 7.8 9.4 9.4-5.6 1.6-7.8 3.8-9.4 9.4-1.6-5.6-3.8-7.8-9.4-9.4C8.2 9.6 10.4 7.4 12 1.8Z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14M13 6.5l5.5 5.5L13 17.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7.5 7H17v9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3" fill="none" stroke="currentColor" stroke-width="1.65"/><path d="m15.5 15.5 4.3 4.3" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.6 8.8c0 4.3-8.6 10.1-8.6 10.1S3.4 13.1 3.4 8.8a4.8 4.8 0 0 1 8.6-2.9 4.8 4.8 0 0 1 8.6 2.9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.1 8.5h13.8l1 11.2H4.1l1-11.2ZM9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11m-4-4 4 4 4-4M5 17v2.5h14V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-device" viewBox="0 0 24 24"><rect x="3" y="4" width="14" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 19h6m-3-4v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="16" y="9" width="5" height="10" rx="1" fill="#f6f3ff" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4V20.5H6zM14 3.5v4h4M9 12h6M9 15.5h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.4c3-1 5.6-.6 8 1.2 2.4-1.8 5-2.2 8-1.2v13c-3-1-5.6-.6-8 1.2-2.4-1.8-5-2.2-8-1.2v-13ZM12 6.6v13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 4h4m-7 3 1 12h8l1-12M10 10v6m4-6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div class="announcement">
+    <div class="shell announcement-inner">
+      <span class="announcement-note"><svg class="icon"><use href="#i-spark"></use></svg> ПЛАНЕРЫ · КНИГИ · ПРИЛОЖЕНИЯ · ШАБЛОНЫ</span>
+      <span class="announcement-promo">Оплата картой через <strong>BlackSea</strong> — файлы сразу после покупки</span>
+      <span class="announcement-end">YOUR LITTLE DIGITAL SPACE <span>✳</span></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell header-main">
+      <a class="brand" href="#top" aria-label="ALEX.UA digital — на главную">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8 6.8 25.2" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-word"><span class="brand-name" data-brand-name>ALEX.UA</span><span class="brand-dot">.</span><small data-brand-sub>DIGITAL MARKET</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#catalog" data-nav-category="Все">Каталог</a>
+        <a href="#catalog" data-nav-category="Планеры">Планеры</a>
+        <a href="#catalog" data-nav-category="Книги">Книги</a>
+        <a href="#catalog" data-nav-category="Приложения">Приложения</a>
+        <a href="#catalog" data-nav-category="Шаблоны">Шаблоны</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" id="desktopSearchForm" role="search">
+          <svg class="icon"><use href="#i-search"></use></svg>
+          <input id="searchInput" type="search" placeholder="Поиск товаров" aria-label="Поиск товаров" autocomplete="off">
+        </form>
+        <div class="currency-toggle" role="group" aria-label="Валюта пересчёта цен">
+          <button class="is-active" type="button" data-currency="UAH" aria-pressed="true" aria-label="Показывать цены в гривне"><span>₴</span><b>UAH</b></button>
+          <button type="button" data-currency="USD" aria-pressed="false" aria-label="Показывать цены в долларе"><span>$</span><b>USD</b></button>
+        </div>
+        <button class="header-icon mobile-search-toggle" type="button" id="mobileSearchToggle" aria-label="Открыть поиск" aria-expanded="false" aria-controls="mobileSearchBar"><svg class="icon"><use href="#i-search"></use></svg></button>
+        <button class="header-icon favorite-header" type="button" id="favoritesButton" aria-label="Показать избранное" aria-pressed="false"><svg class="icon"><use href="#i-heart"></use></svg><span class="counter-dot" id="favoritesCount" hidden>0</span></button>
+        <a class="header-cart" href="https://844129289197.blacksea.in.ua/" target="_blank" rel="noopener" data-store-link aria-label="Открыть магазин на BlackSea"><svg class="icon"><use href="#i-up-right"></use></svg><span class="cart-word">Магазин</span></a>
+      </div>
+    </div>
+    <div class="mobile-search-bar shell" id="mobileSearchBar" hidden>
+      <form id="mobileSearchForm" role="search"><svg class="icon"><use href="#i-search"></use></svg><input id="mobileSearchInput" type="search" placeholder="Найти планер, книгу, шаблон..." aria-label="Поиск товаров на сайте" autocomplete="off"></form>
+    </div>
+    <nav class="mobile-nav shell" aria-label="Категории">
+      <a href="#catalog" data-nav-category="Все">Каталог</a>
+      <a href="#catalog" data-nav-category="Планеры">Планеры</a>
+      <a href="#catalog" data-nav-category="Книги">Книги</a>
+      <a href="#catalog" data-nav-category="Приложения">Приложения</a>
+      <a href="#catalog" data-nav-category="Шаблоны">Шаблоны</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="eyebrow-dot"></span> ПРАКТИЧНЫЕ ЦИФРОВЫЕ МАТЕРИАЛЫ</div>
+          <h1 id="heroTitle">Маленькие файлы.<br>Большие <em>идеи.</em></h1>
+          <p>Планеры, книги и шаблоны для повседневных задач: покупаете — и сразу скачиваете. Оплата картой, без ожидания доставки.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog" data-nav-category="Все">Смотреть каталог <svg class="icon"><use href="#i-arrow"></use></svg></a>
+            <a class="hero-link" href="#how">Как это работает <svg class="icon"><use href="#i-up-right"></use></svg></a>
+          </div>
+          <div class="hero-bottom"><svg class="icon"><use href="#i-spark"></use></svg> ПЛАНЕРЫ&nbsp; · &nbsp;КНИГИ&nbsp; · &nbsp;ПРИЛОЖЕНИЯ&nbsp; · &nbsp;ШАБЛОНЫ</div>
+        </div>
+        <div class="hero-visual hero-collage">
+          <span class="hero-tag">100%<br>DIGITAL</span>
+          <div class="plate plate-left"><img src="assets/products/lhm.jpg" alt="Планнер на 30 дней"></div>
+          <div class="plate plate-main"><img src="assets/products/olzb.jpg" alt="Планер 2027"></div>
+          <div class="plate plate-right"><img src="assets/products/yox.jpg" alt="5 шаблонов объявлений"></div>
+        </div>
+      </section>
+
+      <section class="benefits" aria-label="О магазине">
+        <div class="benefit"><span class="benefit-icon lilac"><svg class="icon"><use href="#i-download"></use></svg></span><div><strong>Файлы сразу после оплаты</strong><span>Ссылка на скачивание приходит на e-mail</span></div></div>
+        <div class="benefit"><span class="benefit-icon peach"><svg class="icon"><use href="#i-device"></use></svg></span><div><strong>Всегда под рукой</strong><span>На телефоне, планшете или компьютере</span></div></div>
+        <div class="benefit"><span class="benefit-icon lime"><svg class="icon"><use href="#i-spark"></use></svg></span><div><strong>Оплата картой</strong><span>Защищённый платёж и чек от BlackSea</span></div></div>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker"><span>01 / КАТАЛОГ</span><span class="kicker-line"></span> ВЫБИРАЙТЕ СВОЁ</div>
+            <h2 id="catalogTitle">Цифровые <em>находки.</em></h2>
+            <p>Планеры, книги, веб-приложения и шаблоны — всё готово к скачиванию.</p>
+          </div>
+          <label class="sort-control">Сортировка <span><select id="sortSelect" aria-label="Сортировка товаров"><option value="popular">По популярности</option><option value="new">Сначала новинки</option><option value="cheap">Сначала дешевле</option><option value="expensive">Сначала дороже</option></select><svg class="icon"><use href="#i-chevron"></use></svg></span></label>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="category-pills" id="categoryPills" aria-label="Категории товаров"></div>
+          <div class="catalog-meta"><p class="currency-note"><span>₴ / $</span><span class="currency-copy">Цена в валюте товара · пересчёт $1 = <b data-demo-rate>45.1</b> ₴</span></p><span class="result-count" id="resultCount" aria-live="polite"></span></div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="freebie" id="freebie" aria-labelledby="freebieTitle">
+        <div class="freebie-copy">
+          <div class="section-kicker"><span>02 / ДЛЯ ВАС</span><span class="kicker-line"></span> С ЛЮБОВЬЮ ОТ <span data-brand-upper>ALEX.UA</span></div>
+          <h2 id="freebieTitle">Хорошая неделя<br>начинается <em>с плана.</em></h2>
+          <p>Планер недели — бесплатно и без регистрации: оставьте место для важных дел и маленьких радостей.</p>
+          <div class="freebie-actions"><a class="button button-dark" href="assets/planner-weekly.pdf" download="ALEX-планер-недели.pdf">Скачать бесплатно <svg class="icon"><use href="#i-download"></use></svg></a><span>PDF · 1 страница · A4</span></div>
+        </div>
+        <div class="freebie-visual"><img src="assets/gift-planner.svg" alt="Бесплатный планер недели с местом для ваших планов"></div>
+      </section>
+
+      <section class="how-section" id="how" aria-labelledby="howTitle">
+        <div class="section-heading how-heading"><div><div class="section-kicker"><span>03 / ПРОСТО И УДОБНО</span><span class="kicker-line"></span> КАК ЭТО РАБОТАЕТ</div><h2 id="howTitle">Всего несколько <em>шагов.</em></h2><p>От выбора до готового файла — пара минут.</p></div><svg class="how-spark"><use href="#i-spark"></use></svg></div>
+        <div class="steps">
+          <div class="step"><div class="step-top"><span>01</span><svg class="icon"><use href="#i-heart"></use></svg></div><h3>Найдите своё</h3><p>Выберите планер, книгу, приложение или шаблон под свои задачи.</p></div>
+          <div class="step"><div class="step-top"><span>02</span><svg class="icon"><use href="#i-bag"></use></svg></div><h3>Оплатите картой</h3><p>Кнопка «Купить» открывает защищённую страницу оплаты BlackSea.</p></div>
+          <div class="step"><div class="step-top"><span>03</span><svg class="icon"><use href="#i-download"></use></svg></div><h3>Заберите файлы</h3><p>Ссылка на скачивание приходит сразу после оплаты — без ожидания.</p></div>
+        </div>
+        <p class="demo-note"><svg class="icon"><use href="#i-spark"></use></svg> Оплата и выдача файлов проходят на стороне BlackSea. Возврат — по закону и <a href="https://blacksea.in.ua/terms#section-17" target="_blank" rel="noopener">публичной оферте</a>.</p>
+      </section>
+
+      <section class="faq-section" id="faq" aria-labelledby="faqTitle">
+        <div class="faq-intro"><div class="section-kicker"><span>04 / ПОЛЕЗНО ЗНАТЬ</span></div><h2 id="faqTitle">Остались<br><em>вопросы?</em></h2><p>Собрали ответы на самое важное.</p></div>
+        <div class="faq-list">
+          <details><summary>Как я получу цифровой товар?<span class="faq-plus"><svg class="icon"><use href="#i-plus"></use></svg></span></summary><p>После оплаты на BlackSea ссылка на скачивание приходит на e-mail сразу же. Файлы остаются доступны в вашем заказе — скачать можно повторно.</p></details>
+          <details><summary>На каких устройствах можно открыть файлы?<span class="faq-plus"><svg class="icon"><use href="#i-plus"></use></svg></span></summary><p>PDF открывается на телефоне, планшете и компьютере, Word и PowerPoint — в соответствующих редакторах (подойдёт бесплатный LibreOffice). Веб-планнеры работают прямо в браузере без установки.</p></details>
+          <details><summary>Планер недели действительно бесплатный?<span class="faq-plus"><svg class="icon"><use href="#i-plus"></use></svg></span></summary><p>Да. Нажмите «Скачать бесплатно» — PDF сохранится на устройство, без регистрации и оплаты. Его можно распечатать или заполнять на планшете.</p></details>
+          <details><summary>Почему цены в гривнах и долларах?<span class="faq-plus"><svg class="icon"><use href="#i-plus"></use></svg></span></summary><p>У каждого товара своя валюта — она указана первой. В шапке можно переключить показ, тогда вторая цена будет пересчитана по курсу $1 = <b data-demo-rate>45.1</b> ₴ и помечена знаком ≈. Оплата проходит в валюте товара.</p></details>
+          <details><summary>Можно ли вернуть деньги?<span class="faq-plus"><svg class="icon"><use href="#i-plus"></use></svg></span></summary><p>Возврат выполняется в случаях и порядке, предусмотренных законом и <a href="https://blacksea.in.ua/terms#section-17" target="_blank" rel="noopener">публичной офертой BlackSea</a> (раздел 17).</p></details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-main">
+      <div class="footer-about">
+        <a class="brand footer-brand" href="#top"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8 6.8 25.2" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></span><span class="brand-word"><span class="brand-name" data-brand-name>ALEX.UA</span><span class="brand-dot">.</span><small data-brand-sub>DIGITAL MARKET</small></span></a>
+        <p>Практичные цифровые материалы для повседневной жизни и работы.</p>
+        <div class="footer-tag">СОЗДАНО ДЛЯ ВАШЕГО ВДОХНОВЕНИЯ <span>✳</span></div>
+      </div>
+      <div class="footer-column"><h3>Магазин</h3><a href="#catalog" data-nav-category="Все">Все товары</a><a href="#catalog" data-nav-category="Планеры">Планеры</a><a href="#catalog" data-nav-category="Книги">Книги</a><a href="#catalog" data-nav-category="Приложения">Приложения</a><a href="#catalog" data-nav-category="Шаблоны">Шаблоны</a></div>
+      <div class="footer-column"><h3>Покупателям</h3><a href="#how">Как это работает</a><a href="#faq">Вопросы и ответы</a><a href="#freebie">Бесплатный планер</a><a href="https://844129289197.blacksea.in.ua/" target="_blank" rel="noopener" data-store-link>Магазин на BlackSea ↗</a></div>
+      <div class="footer-column"><h3>Документы</h3><a href="contacts.html">Контакты</a><a href="offer.html">Публичная оферта</a><a href="privacy.html">Конфиденциальность</a></div>
+      <div class="footer-message"><span>ДЛЯ ВСЕГО, ЧТО ВАЖНО</span><p>Пусть ваши идеи<br><em>расцветают.</em></p><svg class="icon"><use href="#i-spark"></use></svg></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 <span data-store-title>ALEX.UA digital</span>. Оплата и доставка — BlackSea. </span><span>СДЕЛАНО ДЛЯ ВАШИХ ИДЕЙ <span>✳</span></span></div>
+  </footer>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle" aria-hidden="true" hidden>
+    <div class="modal-card product-modal-card"><button class="round-close modal-close" type="button" data-close-panel aria-label="Закрыть"><svg class="icon"><use href="#i-close"></use></svg></button><div id="productModalContent"></div></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
